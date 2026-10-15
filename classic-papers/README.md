@@ -34,8 +34,30 @@ Steven Berry, James Levinsohn, and Ariel Pakes. **Automobile Prices in Market Eq
 
 该入口的工作论文版本发表于 1993 年，正式期刊版本发表于 1995 年。它将差异化产品需求、成本和市场均衡连接起来。进入这篇文献之前，先掌握 Logit、价格内生性与矩条件；阅读时区分消费者异质性、未观测产品特征、数据聚合和供给侧假设各自的作用。
 
+## Berry 1994
+
+Steven T. Berry. **Estimating Discrete-Choice Models of Product Differentiation.** *The RAND Journal of Economics*, 25(2), 242–262.
+
+[论文全文的 Caltech 学术页面入口](https://www.its.caltech.edu/~mshum/gradio/papers/Berry1994.pdf)
+
+衔接第 5—6 单元阅读。先弄清楚市场份额如何映射到平均效用，再追问价格与未观测产品特征相关时，参数如何借助额外限制识别。不要把平均效用反演和结构参数估计当成同一步。
+
+## Nevo 2000
+
+Aviv Nevo. **A Practitioner's Guide to Estimation of Random-Coefficients Logit Models of Demand.** *Journal of Economics & Management Strategy*, 9(4), 513–548.
+
+[出版社页面与 DOI](https://onlinelibrary.wiley.com/doi/10.1111/j.1430-9134.2000.00513.x)
+
+在掌握同质 Logit、价格内生性与矩条件后阅读，用它连接消费者异质性、需求计算和参数估计。期刊卷期年份为 2000；出版社页面另列电子发布时间，不应将两者混为一谈。本仓库当前代码只实现同质 Logit，不是随机系数或 BLP 复现。
+
+## 第二部分的阅读顺序
+
+先读 Train 第 3 章的概率、IIA 与弹性，再读本仓库第 5—6 单元及代码。Berry（1994）连接份额反演与内生性；Nevo（2000）和 BLP（1995）作为下一阶段入口，不要求这一轮完成全部计算细节。
+
 ## 阅读产出
 
 每篇至少写清四项：研究目标；关键模型假设；识别所依赖的数据变化；估计准则与反事实中的不变性假设。使用[论文阅读模板](../templates/paper-note.md)记录，不要只抄写算法步骤。
 
 本索引的入口与出版信息核对日期：2026-10-13。
+
+第二部分新增的 Train 第 3 章入口、Berry（1994）与 Nevo（2000）于 2026-10-15 核对。

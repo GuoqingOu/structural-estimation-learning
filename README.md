@@ -4,6 +4,8 @@
 
 本仓库使用中文讲解，采用“问题 → 直觉 → 数学表达 → 教学例子 → 适用边界”的顺序。先修知识是基础微观经济学、概率统计和回归分析；暂不要求掌握动态规划。
 
+第二部分从二元选择进入多项 Logit，学习外部选项、市场份额、分组最大似然、价格弹性和替代模式。
+
 ## 从这里开始
 
 第一次学习约 40 分钟：阅读[整体框架](notes/01-framework.md)，再跟随[购买决策例子](notes/03-binary-choice-example.md)，完成[自测题](exercises/01-self-check.md)第 1—5 题。
@@ -14,8 +16,12 @@
 | 2 | 为什么模型有解不代表参数可识别？ | [识别、数据变化与模型假设](notes/02-identification.md) |
 | 3 | 如何从消费者决策走到参数估计？ | [二元购买决策的完整例子](notes/03-binary-choice-example.md) |
 | 4 | 如何选择方法、检查结果和进行反事实？ | [估计方法与研究流程](notes/04-estimation-and-workflow.md) |
+| 5 | 如何估计多个产品之间的选择？ | [从二元选择到多项 Logit](notes/05-multinomial-logit.md) |
+| 6 | 涨价如何分流需求，Logit 有哪些限制？ | [价格弹性、替代关系与 IIA](notes/06-elasticities-and-iia.md) |
 
-配套内容：[学习路线](learning-path.md)、[术语表](glossary.md)、[练习](exercises/01-self-check.md)、[参考答案](exercises/01-answers.md)、[文献索引](classic-papers/README.md)、[论文阅读模板](templates/paper-note.md)、[可运行例子](code/README.md)。
+已学完基础框架：从[第 5 单元](notes/05-multinomial-logit.md)继续，结合第 6 单元做[第二部分练习](exercises/02-self-check.md)。
+
+配套内容：[学习路线](learning-path.md)、[术语表](glossary.md)、[基础练习](exercises/01-self-check.md)与[答案](exercises/01-answers.md)、[多项 Logit 练习](exercises/02-self-check.md)与[答案](exercises/02-answers.md)、[文献索引](classic-papers/README.md)、[论文阅读模板](templates/paper-note.md)、[可运行例子](code/README.md)。
 
 ## 三个环节的关系
 
@@ -33,9 +39,10 @@
 
 ```bash
 python code/binary_choice_demo.py
+python code/multinomial_logit_demo.py
 ```
 
-脚本仅使用 Python 标准库，包含单一价格下的观测等价、两个价格下的总体参数恢复、有限样本最大似然估计，以及价格变化幅度与估计精度的比较。所有数据均由脚本按固定随机种子生成。
+两个脚本均仅使用 Python 标准库。二元例子展示观测等价、总体识别与样本估计；多项例子展示两种产品和外部选项的分组最大似然、价格弹性、给定价格的需求反事实以及 IIA。所有随机样本均按固定种子生成，理论概率与模拟样本在输出中分别标明。
 
 ## 与其他学习材料衔接
 
@@ -46,3 +53,5 @@ python code/binary_choice_demo.py
 ## 使用说明
 
 第一版整理于 2026-10-13，定位为整体框架与基础学习。可以直接在 GitHub 阅读，或通过 **Code → Download ZIP** 下载。仓库中的解释与教学代码为独立编写，文献通过作者、大学、出版社或研究机构的原始入口链接提供；不分发论文全文。教学数字不是真实市场估计。
+
+2026-10-15 更新：增加第 5—6 单元、多项 Logit 代码及 12 道配套题；目前共 6 个单元、24 道自测题和 2 个数值脚本。

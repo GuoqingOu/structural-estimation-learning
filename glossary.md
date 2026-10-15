@@ -24,5 +24,16 @@
 | 反事实 | Counterfactual | 在指定环境变化和不变性假设下，计算模型预测的替代结果 |
 | 不变性 | Invariance | 某些结构关系或参数在所考虑的干预下保持稳定的假设 |
 | 模型误设 | Misspecification | 模型限制不能正确描述所研究的数据生成机制 |
+| 外部选项 | Outside option | 不选择当前内部产品集合的备选行为；本例是不购买 A 或 B |
+| 系统效用 | Systematic utility | 效用中由观测变量和参数表达的部分；与随机冲击一起决定选择 |
+| 备选项常数 | Alternative-specific constant | 某选项相对基准备选项的共同吸引力参数 |
+| 多项 Logit | Multinomial Logit | 在本例的独立同分布第一类极值冲击下，选择概率为效用指数的归一化值 |
+| 市场规模 | Market size | 用于界定总体份额的潜在消费者数量，不一定等于已购买人数 |
+| 份额反演 | Share inversion | 从选择份额恢复模型中的平均或系统效用；不自动分离价格与未观测质量 |
+| 自身价格弹性 | Own-price elasticity | 某产品价格变化 1% 时，其需求的局部百分比变化 |
+| 交叉价格弹性 | Cross-price elasticity | 另一产品价格变化 1% 时，本产品需求的局部百分比变化 |
+| 转移比例 | Diversion ratio | 某产品失去的需求中流向某个其他选项的比例，须说明所考虑的变化 |
+| 无关替代项独立性 | Independence of irrelevant alternatives, IIA | 给定两个选项系统效用时，它们的条件选择概率比不受其他选项影响 |
+| 随机系数 | Random coefficients | 让特征的偏好系数随消费者变化，用来扩展异质性与替代模式 |
 
 “弱识别”有多种正式定义。本仓库用价格变化不足导致斜率难以精确估计的例子说明信息强度，具体理论见[文献索引](classic-papers/README.md)。
