@@ -6,6 +6,8 @@
 
 第二部分从二元选择进入多项 Logit，学习外部选项、市场份额、分组最大似然、价格弹性和替代模式。
 
+第三部分加入未观测产品质量，学习价格内生性、工具变量、两阶段最小二乘和 GMM，并区分无效工具、弱工具与市场内相关。
+
 ## 从这里开始
 
 第一次学习约 40 分钟：阅读[整体框架](notes/01-framework.md)，再跟随[购买决策例子](notes/03-binary-choice-example.md)，完成[自测题](exercises/01-self-check.md)第 1—5 题。
@@ -18,8 +20,12 @@
 | 4 | 如何选择方法、检查结果和进行反事实？ | [估计方法与研究流程](notes/04-estimation-and-workflow.md) |
 | 5 | 如何估计多个产品之间的选择？ | [从二元选择到多项 Logit](notes/05-multinomial-logit.md) |
 | 6 | 涨价如何分流需求，Logit 有哪些限制？ | [价格弹性、替代关系与 IIA](notes/06-elasticities-and-iia.md) |
+| 7 | 为什么价格内生，工具如何提供识别？ | [价格内生性、份额反演与工具变量](notes/07-endogeneity-and-iv.md) |
+| 8 | 如何组合矩条件并判断结果可信度？ | [从 2SLS 到 GMM 与识别诊断](notes/08-gmm-and-diagnostics.md) |
 
 已学完基础框架：从[第 5 单元](notes/05-multinomial-logit.md)继续，结合第 6 单元做[第二部分练习](exercises/02-self-check.md)。
+
+已学完多项 Logit：从[第 7 单元](notes/07-endogeneity-and-iv.md)继续，结合第 8 单元做[第三部分练习](exercises/03-self-check.md)，再对照[答案](exercises/03-answers.md)与模拟输出。
 
 配套内容：[学习路线](learning-path.md)、[术语表](glossary.md)、[基础练习](exercises/01-self-check.md)与[答案](exercises/01-answers.md)、[多项 Logit 练习](exercises/02-self-check.md)与[答案](exercises/02-answers.md)、[文献索引](classic-papers/README.md)、[论文阅读模板](templates/paper-note.md)、[可运行例子](code/README.md)。
 
@@ -40,9 +46,10 @@
 ```bash
 python code/binary_choice_demo.py
 python code/multinomial_logit_demo.py
+python code/iv_gmm_demand_demo.py
 ```
 
-两个脚本均仅使用 Python 标准库。二元例子展示观测等价、总体识别与样本估计；多项例子展示两种产品和外部选项的分组最大似然、价格弹性、给定价格的需求反事实以及 IIA。所有随机样本均按固定种子生成，理论概率与模拟样本在输出中分别标明。
+三个脚本均仅使用 Python 标准库。二元例子展示观测等价、总体识别与样本估计；多项例子展示两种产品和外部选项的分组最大似然、价格弹性、给定价格的需求反事实以及 IIA；IV/GMM 例子比较 OLS、2SLS 与两步 GMM，展示有效、无效和弱工具，并按市场聚类计算协方差。所有随机样本均按固定种子生成；第三个脚本直接使用总体份额，其他例子另有有限消费者的抽样。
 
 ## 与其他学习材料衔接
 
@@ -54,4 +61,6 @@ python code/multinomial_logit_demo.py
 
 第一版整理于 2026-10-13，定位为整体框架与基础学习。可以直接在 GitHub 阅读，或通过 **Code → Download ZIP** 下载。仓库中的解释与教学代码为独立编写，文献通过作者、大学、出版社或研究机构的原始入口链接提供；不分发论文全文。教学数字不是真实市场估计。
 
-2026-10-15 更新：增加第 5—6 单元、多项 Logit 代码及 12 道配套题；目前共 6 个单元、24 道自测题和 2 个数值脚本。
+2026-10-15 更新：增加第 5—6 单元、多项 Logit 代码及 12 道配套题。
+
+2026-10-18 更新：增加第 7—8 单元、IV/GMM 代码及 12 道配套题；目前共 8 个单元、36 道自测题和 3 个数值脚本。

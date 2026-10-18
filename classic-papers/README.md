@@ -54,6 +54,34 @@ Aviv Nevo. **A Practitioner's Guide to Estimation of Random-Coefficients Logit M
 
 先读 Train 第 3 章的概率、IIA 与弹性，再读本仓库第 5—6 单元及代码。Berry（1994）连接份额反演与内生性；Nevo（2000）和 BLP（1995）作为下一阶段入口，不要求这一轮完成全部计算细节。
 
+## Hansen 1982
+
+Lars Peter Hansen. **Large Sample Properties of Generalized Method of Moments Estimators.** *Econometrica*, 50(4), 1029–1054.
+
+[作者网站论文入口](https://larspeterhansen.org/wp-content/uploads/2016/11/Hansen-econometrica-GMM.pdf)
+
+连接总体正交限制、样本矩、权重和估计量的大样本性质。先对照第 8 单元的线性公式，理解为什么权重与效率相关，再逐步阅读一般理论；不要把效率结果用于无效矩条件或直接套用到弱识别情形。
+
+## Staiger 与 Stock 1997
+
+Douglas Staiger and James H. Stock. **Instrumental Variables Regression with Weak Instruments.** *Econometrica*, 65(3), 557–586.
+
+[Stock 作者机构出版记录](https://stock.scholars.harvard.edu/publications/instrumental-variables-regression-weak-instruments)
+
+阅读问题：当工具对内生变量的解释能力很弱时，常规大样本近似为什么可能误导？文中的具体设定、统计量和参考临界值有适用条件，不能将它们概括为任何异方差或聚类场景都适用的单一第一阶段门槛。
+
+## Cameron 与 Miller 2015
+
+A. Colin Cameron and Douglas L. Miller. **A Practitioner's Guide to Cluster-Robust Inference.** *Journal of Human Resources*, 50(2).
+
+[Cameron 作者机构论文入口](https://cameron.econ.ucdavis.edu/research/Cameron_Miller_JHR_2015.pdf)
+
+先读独立聚类与组内相关的基本框架，再看第 VII 节中 IV 和 GMM 的扩展。对应本仓库的市场矩贡献 $h_t$，辨认消费者数、产品市场观测数和独立市场数各自承担什么作用。
+
+## 第三部分的阅读顺序
+
+先读 [Train 第 13 章](https://eml.berkeley.edu/books/choice2nd/Ch13_p315-346.pdf)的价格内生性，再读本仓库第 7—8 单元并运行 IV/GMM 例子。随后用 Hansen（1982）理解矩估计框架，用 Staiger 与 Stock（1997）理解弱工具，用 Cameron 与 Miller（2015）理解市场内相关。随机系数需求与 BLP 留作下一部分。
+
 ## 阅读产出
 
 每篇至少写清四项：研究目标；关键模型假设；识别所依赖的数据变化；估计准则与反事实中的不变性假设。使用[论文阅读模板](../templates/paper-note.md)记录，不要只抄写算法步骤。
@@ -61,3 +89,5 @@ Aviv Nevo. **A Practitioner's Guide to Estimation of Random-Coefficients Logit M
 本索引的入口与出版信息核对日期：2026-10-13。
 
 第二部分新增的 Train 第 3 章入口、Berry（1994）与 Nevo（2000）于 2026-10-15 核对。
+
+第三部分新增的 Train 第 13 章、Hansen（1982）、Staiger 与 Stock（1997）及 Cameron 与 Miller（2015）入口与出版信息于 2026-10-18 核对。

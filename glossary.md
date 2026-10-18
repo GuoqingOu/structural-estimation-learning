@@ -35,5 +35,16 @@
 | 转移比例 | Diversion ratio | 某产品失去的需求中流向某个其他选项的比例，须说明所考虑的变化 |
 | 无关替代项独立性 | Independence of irrelevant alternatives, IIA | 给定两个选项系统效用时，它们的条件选择概率比不受其他选项影响 |
 | 随机系数 | Random coefficients | 让特征的偏好系数随消费者变化，用来扩展异质性与替代模式 |
+| 价格内生性 | Price endogeneity | 在指定结构关系中，价格与未观测需求冲击相关，破坏相应外生矩条件 |
+| 工具相关性 | Instrument relevance | 控制已有变量后，排除工具仍提供区分内生解释变量影响的信息；一般需相应秩条件 |
+| 两阶段最小二乘 | Two-stage least squares, 2SLS | 利用工具对解释变量的线性投影估计结构系数；也是特定权重的线性 GMM |
+| 广义矩估计 | Generalized method of moments, GMM | 通过加权最小化样本矩与模型矩限制的偏离来估计参数 |
+| 权重矩阵 | Weighting matrix | 衡量不同矩偏离及其相关性的矩阵；正确设定下，矩协方差的逆可给出有效权重 |
+| 恰好识别 | Exact identification | 在本例中有效且独立的矩条件与参数个数相等，并满足相应秩条件 |
+| 过度识别 | Overidentification | 在本例中矩条件多于参数，满足识别条件后还存在额外可检验限制 |
+| 弱工具 | Weak instruments | 工具对内生变量提供的识别信息较弱，有限样本估计与常规推断可能不稳定 |
+| 部分决定系数 | Partial R-squared | 本例中，已有控制变量之外排除工具减少第一阶段残差平方和的比例 |
+| 聚类稳健协方差 | Cluster-robust covariance | 允许指定群组内误差相关的协方差估计；常规渐近依据是足够多的独立群组 |
+| 过度识别检验 | Overidentification test | 检验联合矩限制与模型的相容性；不能凭不拒绝证明工具有效 |
 
-“弱识别”有多种正式定义。本仓库用价格变化不足导致斜率难以精确估计的例子说明信息强度，具体理论见[文献索引](classic-papers/README.md)。
+“弱识别”有多种正式定义。本仓库先用价格变化不足说明信息强度，再在[第 8 单元](notes/08-gmm-and-diagnostics.md)展示弱工具；具体理论见[文献索引](classic-papers/README.md)。
